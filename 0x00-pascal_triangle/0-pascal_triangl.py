@@ -1,5 +1,7 @@
 #!/usr/bin/python3
 """ pascals trianlge implementation """
+
+
 def pascal_triangle(n):
     """ create an array of arrays """
     if n <= 0:
