@@ -1,9 +1,29 @@
 #!/usr/bin/python3
-""" pascals trianlge implementation """
+"""This module implements Pascal's triangle.
+
+Pascal's triangle is a triangular array of numbers that follows a simple rule:
+each number is the sum of the two numbers directly above it. The module
+contains a function that generates Pascal's triangle up to a given number of
+rows.
+
+Example:
+    >>> pascal_triangle(5)
+    [[], [1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
+"""
 
 
 def pascal_triangle(n):
-    """ create an array of arrays """
+    """Generate Pascal's triangle up to n rows.
+
+    Args:
+        n (int): The number of rows to generate.
+
+    Returns:
+        list: A list of lists representing Pascal's triangle.
+
+    Raises:
+        ValueError: If n is negative.
+    """
     if n <= 0:
         return [[]]
 
