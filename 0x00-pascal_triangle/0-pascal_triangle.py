@@ -1,7 +1,5 @@
 #!/usr/bin/python3
 """ pascals trianlge implementation """
-import datetime
-
 def pascal_triangle(n):
     """ create an array of arrays """
     if n <= 0:
