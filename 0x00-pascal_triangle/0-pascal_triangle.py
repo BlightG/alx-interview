@@ -1,20 +1,20 @@
 #!/usr/bin/python3
-def pascal_triangle(n):
+""" pascals trianlge """
 
+def pascal_triangle(n):
+	""" create an array of arrays """
 	if n <= 0:
 		return [[]]
 
 	triangle = [[]]
 
 	for i in range(n):
-		triangle.append(
-			triangle_row(i, triangle)
-		)
+		triangle.append(triangle_row(i, triangle))
 
 	return triangle
 
 def triangle_row(i, triangle):
-
+	""" create an array for the trianlge """
 	# print(f'in triangle row returning for i = {i}')#, end="")
 	if i == 0:
 		# print(f" {[1]}")
