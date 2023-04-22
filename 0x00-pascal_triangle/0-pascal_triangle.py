@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" pascals trianlge """
+""" pascals trianlge implementation"""
 
 def pascal_triangle(n):
 	""" create an array of arrays """
