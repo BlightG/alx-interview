@@ -14,7 +14,7 @@ def pascal_triangle(n):
 
 def triangle_row(i, triangle):
 
-	print(f'in triangle row returning for i = {i}')#, end="")
+	# print(f'in triangle row returning for i = {i}')#, end="")
 	if i == 0:
 		# print(f" {[1]}")
 		return [1]
@@ -33,7 +33,7 @@ def triangle_row(i, triangle):
 	# print(f' and with range {range_}', end="")
 
 	for j in range(range_ + 1):
-		print(f'foward j = {j}')
+		# print(f'foward j = {j}')
 		if j == 0:
 			row.append(1)
 		elif j == 1:
@@ -45,7 +45,7 @@ def triangle_row(i, triangle):
 
 	if i % 2 != 0:
 		for j in range(range_, -1, -1):
-			print(f'reverse j = {j}')
+			# print(f'reverse j = {j}')
 			row.append(row[j])
 			# if j - i == 1:
 			# 	row.append(1)
@@ -55,8 +55,8 @@ def triangle_row(i, triangle):
 			# 	row.append(triangle[i - 1][j - 1] - triangle[i - 1][j])
 	else:
 		for j in range(range_ - 1, -1, -1):
-			print(f'reverse j = {j}')
+			# print(f'reverse j = {j}')
 			row.append(row[j])
-	print(f' {row}')
+	# print(f' {row}')
 	return row
 		
