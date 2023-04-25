@@ -17,7 +17,7 @@ def canUnlockAll(boxes):
         lenght = len(keyset)
         for i in keyset.copy():
             for j in boxes[i]:
-                if j < len(boxes)
+                if j < len(boxes):
                     keyset.add(j)
 
     if 0 in keyset:
