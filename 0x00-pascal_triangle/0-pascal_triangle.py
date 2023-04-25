@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-"""This module implements Pascal's triangle.
+"""
+This module implements Pascal's triangle.
 
 Pascal's triangle is a triangular array of numbers that follows a simple rule:
 each number is the sum of the two numbers directly above it. The module
