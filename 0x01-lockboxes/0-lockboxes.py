@@ -4,8 +4,8 @@
 
 def canUnlockAll(boxes):
     """ can unlock boxes """
-    # if len(boxes[0]) == 0:
-    #     return False
+    if len(boxes[0]) == 0:
+        return False
 
     keyset = set()
 
@@ -19,9 +19,11 @@ def canUnlockAll(boxes):
             for j in boxes[i]:
                 keyset.add(j)
 
-    keyset.remove(0)
+    if 0 in keyset:
+        keyset.remove(0)
 
-    if len(keyset) == len(boxes):
+    # print(f'keyset > {len(keyset)} boxes > {len(boxes)}')
+    if len(keyset) + 1 == len(boxes):
         return True
 
     return False
