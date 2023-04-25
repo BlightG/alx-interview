@@ -4,8 +4,8 @@
 
 def canUnlockAll(boxes):
     """ can unlock boxes """
-    if len(boxes[0]) == 0:
-        return False
+    if len(boxes) == 1:
+        return True
 
     keyset = set()
 
