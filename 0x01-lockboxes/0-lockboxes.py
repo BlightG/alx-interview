@@ -4,8 +4,8 @@
 
 def canUnlockAll(boxes):
     """ can unlock boxes """
-    if len(boxes[0]) == 0:
-        return False
+    # if len(boxes[0]) == 0:
+    #     return False
 
     keyset = set()
 
@@ -21,28 +21,7 @@ def canUnlockAll(boxes):
 
     keyset.remove(0)
 
-    if len(keyset) < len(boxes):
-        return False
+    if len(keyset) == len(boxes):
+        return True
 
-    return True
-    # for i in keyset.copy():
-    #     for j in boxes[i]:
-    #         keyset.add(j)
-
-    # for i in keyset.copy():
-    #     for j in boxes[i]:
-    #         keyset.add(j)
-
-    # for i in keyset.copy():
-    #     for j in boxes[i]:
-    #         keyset.add(j)
-
-    # for i in keyset.copy():
-    #     for j in boxes[i]:
-    #         keyset.add(j)
-
-    # for i in keyset.copy():
-    #     for j in boxes[i]:
-    #         keyset.add(j)
-
-    # return(keyset)
+    return False
