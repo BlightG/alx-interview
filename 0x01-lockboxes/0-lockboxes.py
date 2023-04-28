@@ -16,13 +16,12 @@ def canUnlockAll(boxes):
         if i < len(boxes):
             keyset.add(i)
 
-    
     lenght = 0
     # checks if the amount of k in the boxes is less than the amount of boxes
     while lenght < len(keyset):
         # set length as lenght of keyset
         lenght = len(keyset)
-        # loop over the copy of the set 
+        # loop over the copy of the set
         for i in keyset.copy():
             # add keys to keyset that have mathicing boxes
             if i < len(boxes):
