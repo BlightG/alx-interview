@@ -10,8 +10,32 @@ def minOperations(n: int) -> int:
     if n <= 0:
         return 0
 
-    # 1 => ca => p => (1 + 1) 2 => ca => p => (2 + 2) 4
-    # 1 => ca => p => (1 + 1) 2 => p => (1 + 2) 3 => ca =>
-    # p => (3 + 3) 6 => ca => p => (6 + 6) 12
     factor_list = [i for i in range(1, n + 1) if n % i == 0]
-    return len(factor_list) + 1
+    # print(factor_list)
+    return factor_recursion(n)
+    # return factor_list
+
+
+def factor_recursion(n: int) -> int:
+    """ a recusive function that creats a recursive function """
+
+    # print(n, end="")
+
+    if n == 1:
+        return 1
+
+    if n <= 0:
+        return 0
+
+    flag = 0
+    for i in range(2, n + 1):
+        if n % i == 0:
+            if n != i:
+                flag = i
+            break
+
+    # print(f'count = {count}')
+    if flag == 0:
+        return n
+    else:
+        return int(n / factor_recursion(int(n / flag))) + factor_recursion(int(n / flag))
