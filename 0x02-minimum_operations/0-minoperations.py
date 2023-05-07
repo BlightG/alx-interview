@@ -39,4 +39,5 @@ def factor_recursion(n: int) -> int:
     if flag == 0:
         return n
     else:
-        return int(n / factor_recursion(int(n / flag))) + factor_recursion(int(n / flag))
+        # print(f'retun = {flag + factor_recursion(int(n / flag))} for n = {n} and flag = {flag}')
+        return flag + factor_recursion(int(n / flag))
