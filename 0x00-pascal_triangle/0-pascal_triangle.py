@@ -8,7 +8,7 @@ contains a function that generates Pascal's triangle up to a given number of
 rows.
 
 Example:
-    >>> pascal_triangle(5)
+    pascal_triangle(5)
     [[], [1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
 """
 
