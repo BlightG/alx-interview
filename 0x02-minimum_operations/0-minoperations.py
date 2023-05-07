@@ -11,7 +11,7 @@ def minOperations(n: int) -> int:
         return 0
     
 
-    factor_list = [i for i in range(1, n + 1) if n % i == 0]
+    # factor_list = [i for i in range(1, n + 1) if n % i == 0]
     # print(factor_list)
     return factor_recursion(n)
     # return factor_list
@@ -35,7 +35,7 @@ def factor_recursion(n: int) -> int:
                 flag = i
             break
 
-    # print(f'count = {count}')
+    # print(f'flag = {flag}')
     if flag == 0:
         return n
     else:
