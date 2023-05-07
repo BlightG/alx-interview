@@ -38,7 +38,7 @@ def pascal_triangle(n):
 
 def triangle_row(i, triangle):
     """ create an array for the trianlge """
-    # print(f'in triangle row returning for i = {i}')#, end="")
+    
     if i == 0:
         # print(f" {[1]}")
         return [1]
