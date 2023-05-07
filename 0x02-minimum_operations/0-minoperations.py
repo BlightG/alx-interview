@@ -9,18 +9,15 @@ def minOperations(n: int) -> int:
 
     if n <= 1:
         return 0
-    
 
-    # factor_list = [i for i in range(1, n + 1) if n % i == 0]
-    # print(factor_list)
     return factor_recursion(n)
-    # return factor_list
 
 
 def factor_recursion(n: int) -> int:
-    """ a recusive function that creats a recursive function """
-
-    # print(n, end="")
+    """ a recusive function that finds the answer
+        by the idea that the minoperation is found by multipling
+        the second bigest factor with the second smallest factor
+    """
 
     if n == 1:
         return 1
@@ -29,15 +26,19 @@ def factor_recursion(n: int) -> int:
         return 0
 
     flag = 0
+    # a loop to find the smallest factor for n
     for i in range(2, n + 1):
         if n % i == 0:
+            # if the smallest factor of n is not itself
+            # i.e if n is not prime set the flag to i and break out of loop
             if n != i:
                 flag = i
             break
 
-    # print(f'flag = {flag}')
+    # if n is prime return n since it takes n amount of steps to create n
     if flag == 0:
         return n
+    # this basically means the easiest step is add the second biggest factor
+    # the lowest the lowest flag times to get the minoperation
     else:
-        # print(f'retun = {flag + factor_recursion(int(n / flag))} for n = {n} and flag = {flag}')
         return flag + factor_recursion(int(n / flag))
