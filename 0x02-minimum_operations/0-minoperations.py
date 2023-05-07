@@ -7,8 +7,9 @@ def minOperations(n: int) -> int:
         multiplication required to make n  starting from 1
     """
 
-    if n <= 0:
+    if n <= 1:
         return 0
+    
 
     factor_list = [i for i in range(1, n + 1) if n % i == 0]
     # print(factor_list)
