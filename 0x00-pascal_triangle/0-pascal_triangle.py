@@ -3,7 +3,7 @@
 
 
 def pascal_triangle(n):
-    """Generate Pascal's triangle up to n rows.
+    """ Generate Pascal's triangle up to n rows.
 
     Args:
         n (int): The number of rows to generate.
@@ -12,8 +12,9 @@ def pascal_triangle(n):
         list: A list of lists representing Pascal's triangle.
 
     Raises:
-        ValueError: If n is negative.
+        ValueError: If n is negative
     """
+
    if n <= 0:
         return []
     triangle = [[1]]
