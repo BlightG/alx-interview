@@ -1,3 +1,5 @@
+#!/usr/bin/python3
+""" a log parsing interview answer """
 import sys
 from typing import Optional, Union, List
 from datetime import datetime
