@@ -1,10 +1,8 @@
 #!/usr/bin/python3
-""" a log parsing interivew question """
-
 import sys
 from typing import Optional, Union, List
 from datetime import datetime
-
+""" a log parsing interivew question """
 
 def check_ip(ip: str) -> bool:
     """ returns true if ip is correct """
