@@ -1,5 +1,6 @@
 #!/usr/bin/python3
-''' a log parsing interivew question '''
+""" a log parsing interivew question """
+
 import sys
 from typing import Optional, Union, List
 from datetime import datetime
