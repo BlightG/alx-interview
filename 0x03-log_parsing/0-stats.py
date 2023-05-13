@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """a log parsing interview answer"""
 import sys
+import signal
 from typing import Optional, Union, List
 from datetime import datetime
 
@@ -117,6 +118,21 @@ if __name__ == "__main__":
     size = 0
     code_dict = {200: 0, 301: 0, 400: 0, 401: 0,
                  403: 0, 404: 0, 405: 0, 500: 0}
+
+    def myfunction():
+        print(f'File size: {size}', flush=True)
+        for key, values in code_dict.items():
+            if values != 0:
+                print(f'{key}: {values}', flush=True)
+                code_dict[key] = 0
+
+    def sigint_handler(signal, frame):
+        myfunction()
+        # raise KeyboardInterrupt to exit the program
+        raise KeyboardInterrupt
+
+    signal.signal(signal.SIGINT, sigint_handler)
+
     for line in sys.stdin:
 
         # uses different functions to check for correct line input
