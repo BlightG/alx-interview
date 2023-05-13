@@ -124,14 +124,14 @@ if __name__ == "__main__":
         for key, values in code_dict.items():
             if values != 0:
                 print(f'{key}: {values}', flush=True)
-                code_dict[key] = 0
+                # code_dict[key] = 0
 
     def sigint_handler(signal, frame):
         myfunction()
         # raise KeyboardInterrupt to exit the program
         raise KeyboardInterrupt
 
-    signal.signal(signal.SIGINT, sigint_handler)
+    # signal.signal(signal.SIGINT, sigint_handler)
 
     for line in sys.stdin:
 
@@ -148,12 +148,14 @@ if __name__ == "__main__":
             size += cline[1]
             code_dict[cline[0]] += 1
 
+        signal.signal (signal.SIGINT, sigint_handler)
+
         # if 10 line are properly checked
         if line_count == 10:
             print(f'File size: {size}')
             for key, values in code_dict.items():
                 if values != 0:
                     print(f'{key}: {values}')
-                    code_dict[key] = 0
+                    # code_dict[key] = 0
             line_count = 0
             size = 0
