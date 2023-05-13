@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" Pascal Triangle Interview Challenge """
+"""pascal Triangle Interview Challenge"""
 
 
 def pascal_triangle(n):
@@ -15,7 +15,7 @@ def pascal_triangle(n):
         ValueError: If n is negative
     """
 
-   if n <= 0:
+    if n <= 0:
         return []
     triangle = [[1]]
     for i in range(1, n):

@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+""" generates random logs """
 import random
 import sys
 from time import sleep
