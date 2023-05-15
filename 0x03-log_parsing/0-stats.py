@@ -129,7 +129,7 @@ if __name__ == "__main__":
     def sigint_handler(signal, frame):
         myfunction()
         # raise KeyboardInterrupt to exit the program
-        raise KeyboardInterrupt
+        # raise KeyboardInterrupt
 
     # signal.signal(signal.SIGINT, sigint_handler)
 
