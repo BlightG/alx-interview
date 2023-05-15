@@ -151,7 +151,7 @@ if __name__ == "__main__":
         signal.signal(signal.SIGINT, sigint_handler)
 
         # if 10 line are properly checked
-        if line_count == 9:
+        if line_count == 10:
             print('File size: {}'.format(size))
             for key, values in code_dict.items():
                 if values != 0:
@@ -159,3 +159,8 @@ if __name__ == "__main__":
                     # code_dict[key] = 0
             line_count = 0
             size = 0
+    
+    print('File size: {}'.format(size))
+    for key, values in code_dict.items():
+        if values != 0:
+            print('{}: {}'.format(key, values))
