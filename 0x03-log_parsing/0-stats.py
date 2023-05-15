@@ -117,10 +117,9 @@ if __name__ == "__main__":
     line_count = 0
     size = 0
     code = {401: 0, 400: 0, 403: 0, 500: 0, 405: 0, 200: 0, 404: 0, 301: 0}
-    # print(code)
-    code_dict = { k:v for k,v in sorted(code.items())}
-    # code_dict = dict(sorted(code.items()))
-    print('code_dict = {} code = {}'.format(code, sorted(code.items())))
+    code_dict = {k: v for k, v in sorted(code.items())}
+
+    # print('code_dict = {} code = {}'.format(code_dict, sorted(code.items())))
     def myfunction():
         print('File size: {}'.format(size), flush=True)
         for key, values in code_dict.items():
@@ -160,7 +159,7 @@ if __name__ == "__main__":
                     print('{}: {}'.format(key, values))
                     # code_dict[key] = 0
             line_count = 0
-    
+
     print('File size: {}'.format(size))
     for key in code_dict.keys():
         if code_dict[key] != 0:
