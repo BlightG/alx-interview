@@ -158,7 +158,6 @@ if __name__ == "__main__":
                     print('{}: {}'.format(key, values))
                     # code_dict[key] = 0
             line_count = 0
-            size = 0
     
     print('File size: {}'.format(size))
     for key, values in code_dict.items():
