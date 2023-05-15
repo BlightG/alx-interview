@@ -116,11 +116,11 @@ def check_line(line: str):
 if __name__ == "__main__":
     line_count = 0
     size = 0
-    code = {200: 0, 301: 0, 400: 0, 401: 0,
-            403: 0, 404: 0, 405: 0, 500: 0}
-    
-    code_dict = dict(sorted(code.items()))
-
+    code = {401: 0, 400: 0, 403: 0, 500: 0, 405: 0, 200: 0, 404: 0, 301: 0}
+    # print(code)
+    code_dict = { k:v for k,v in sorted(code.items())}
+    # code_dict = dict(sorted(code.items()))
+    print('code_dict = {} code = {}'.format(code, sorted(code.items())))
     def myfunction():
         print('File size: {}'.format(size), flush=True)
         for key, values in code_dict.items():
@@ -162,6 +162,6 @@ if __name__ == "__main__":
             line_count = 0
     
     print('File size: {}'.format(size))
-    for key, values in code_dict.items():
-        if values != 0:
-            print('{}: {}'.format(key, values))
+    for key in code_dict.keys():
+        if code_dict[key] != 0:
+            print('{}: {}'.format(key, code_dict[key]))
