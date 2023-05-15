@@ -116,8 +116,10 @@ def check_line(line: str):
 if __name__ == "__main__":
     line_count = 0
     size = 0
-    code_dict = {200: 0, 301: 0, 400: 0, 401: 0,
-                 403: 0, 404: 0, 405: 0, 500: 0}
+    code = {200: 0, 301: 0, 400: 0, 401: 0,
+            403: 0, 404: 0, 405: 0, 500: 0}
+    
+    code_dict = dict(sorted(code.items()))
 
     def myfunction():
         print('File size: {}'.format(size), flush=True)
