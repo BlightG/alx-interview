@@ -120,10 +120,10 @@ if __name__ == "__main__":
                  403: 0, 404: 0, 405: 0, 500: 0}
 
     def myfunction():
-        print(f'File size: {size}', flush=True)
+        print('File size: {}'.format(size), flush=True)
         for key, values in code_dict.items():
             if values != 0:
-                print(f'{key}: {values}', flush=True)
+                print('{}: {}'.format(key, values), flush=True)
                 # code_dict[key] = 0
 
     def sigint_handler(signal, frame):
@@ -152,10 +152,10 @@ if __name__ == "__main__":
 
         # if 10 line are properly checked
         if line_count == 10:
-            print(f'File size: {size}')
+            print('File size: {}'.format(size))
             for key, values in code_dict.items():
                 if values != 0:
-                    print(f'{key}: {values}')
+                    print('{}: {}'.format(key, values))
                     # code_dict[key] = 0
             line_count = 0
             size = 0
