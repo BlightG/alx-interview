@@ -2,11 +2,11 @@
 """a log parsing interview answer"""
 import sys
 import signal
-from typing import Optional, Union, List
+# from typing import Optional, Union, List
 from datetime import datetime
 
 
-def check_ip(ip: str) -> bool:
+def check_ip(ip: str):# -> bool:
     """ returns true if ip is correct """
     if ip is None:
         return False
@@ -23,7 +23,7 @@ def check_ip(ip: str) -> bool:
     return True
 
 
-def check_date(year: str, time: str) -> bool:
+def check_date(year: str, time: str):# -> bool:
     """ returns true if date is in the correct format """
 
     if year is None or time is None:
@@ -43,7 +43,7 @@ def check_date(year: str, time: str) -> bool:
     return True
 
 
-def check_code(code: str) -> Union[bool, int]:
+def check_code(code: str):# -> Union[bool, int]:
     """ checks if code is in correct format """
     if code is None:
         return False
@@ -60,7 +60,7 @@ def check_code(code: str) -> Union[bool, int]:
     return code_no
 
 
-def check_size(size: str) -> Union[bool, int]:
+def check_size(size: str):# -> Union[bool, int]:
     """ checks if the size is in correct format """
     if size is None:
         return False
@@ -73,7 +73,7 @@ def check_size(size: str) -> Union[bool, int]:
     return int_size
 
 
-def check_line(line: str) -> Optional[List[int]]:
+def check_line(line: str):# -> Optional[List[int]]:
     """ checks the input line for conformity """
     # splits the str input using " " as delimter
     line_list = line.split()
