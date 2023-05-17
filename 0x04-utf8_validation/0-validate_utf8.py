@@ -14,7 +14,7 @@ def validUTF8(data) -> bool:
     for i in data:
         if i < 128:
             continue
-        else if i >= 128 and i <= 256:
+        elif i >= 128 and i <= 256:
             return False
 
         # bin_list = bin(i)[2:].zfill()
