@@ -12,6 +12,8 @@ def validUTF8(data) -> bool:
         return False
 
     for i in data:
+        if i < 0:
+            i = i * -1
         if i < 128:
             continue
         elif i in range(128, 256):
@@ -28,6 +30,7 @@ def validUTF8(data) -> bool:
             if bin_list[0][:3] != '110' or bin_list[1][:2] != '10':
                 return False
             # repeat similar logic upto end of utf8 range end
+
         elif i in range(65535, 16777215):
             bin_int = bin(i)[2:].zfill(24)
             bin_list = [bin_int[:8], bin_int[8:16], bin_int[16:]]
