@@ -13,7 +13,7 @@ def validUTF8(data) -> bool:
 
     for i in data:
         if i < 0:
-            i = i * -1
+            return False
         if i < 128:
             continue
         elif i in range(128, 256):
