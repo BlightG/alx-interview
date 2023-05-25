@@ -119,7 +119,7 @@ if __name__ == "__main__":
     code = {401: 0, 400: 0, 403: 0, 500: 0, 405: 0, 200: 0, 404: 0, 301: 0}
     code_dict = {k: v for k, v in sorted(code.items())}
 
-    # print('code_dict = {} code = {}'.format(code_dict, sorted(code.items())))
+    print('code_dict = {} code = {}'.format(code_dict, sorted(code.items())))
     def myfunction():
         print('File size: {}'.format(size), flush=True)
         for key, values in code_dict.items():
