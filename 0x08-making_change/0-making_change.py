@@ -20,10 +20,15 @@ def makeChange(coins, total):
     if total in coins:
         return 1
 
+    # used to calculate wht is left from total amount
     new_total = total
+    # used to hold list of used coins if sucess must addup to total
     sum_list = []
+
     coins.sort(reverse=True)
     i = 0
+
+    # loops over the coins List
     while i < len(coins):
         if coins[i] <= new_total:
             if (new_total - coins[i]) >= 0:
