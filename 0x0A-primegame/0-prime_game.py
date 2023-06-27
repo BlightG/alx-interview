@@ -50,8 +50,8 @@ def isWinner(x, nums):
     maria = 0
     ben = 0
 
-    # if x > len(nums):
-    #     return None
+    if x > len(nums):
+        return None
 
     for i in range(x):
         prime = primelist(nums[i])
