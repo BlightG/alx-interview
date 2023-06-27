@@ -55,7 +55,6 @@ def isWinner(x, nums):
         elif len(prime) % 2 != 0:
             maria += 1
 
-    print(f'ben {ben} Maria {maria}')
     if maria > ben:
         return 'Maria'
     else:
