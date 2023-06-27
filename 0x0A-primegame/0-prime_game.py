@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-An Implementation of the prime_game interview Question with details explained in README.md
+    An Implementation of the prime_game interview Question
+    with details explained in README.md
 """
 
 
@@ -22,7 +23,7 @@ def check_prime(num):
 
 
 def primelist(num):
-    """ 
+    """
         Args:
             num: an int value of the number to play for
         Returns:
@@ -39,7 +40,7 @@ def primelist(num):
 
 def isWinner(x, nums):
     """
-        Args: 
+        Args:
             x: an int value for the number of turns to play the game
             nums: a list of number to play for
         Returns:
@@ -48,6 +49,10 @@ def isWinner(x, nums):
 
     maria = 0
     ben = 0
+
+    if x > len(nums):
+        return None
+
     for i in range(x):
         prime = primelist(nums[i])
         if len(prime) == 0 or len(prime) % 2 == 0:
@@ -57,5 +62,7 @@ def isWinner(x, nums):
 
     if maria > ben:
         return 'Maria'
-    else:
+    elif ben < maria:
         return 'Ben'
+    else:
+        return None
